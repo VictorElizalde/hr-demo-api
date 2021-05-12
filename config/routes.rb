@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       namespace :admin do
         resources :companies, except: [:new, :edit]
         resources :vacancies, except: [:new, :edit]
+        resources :applications, only: [:update, :index]
       end
 
       get 'list_vacancies', to: 'vacancies#list_vacancies', as: 'list_vacancies'

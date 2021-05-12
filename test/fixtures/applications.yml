@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  personal_site: MyString
+  bio: MyString
+  status: MyString
+  candidate: one
+  vacancy: one
+
+two:
+  personal_site: MyString
+  bio: MyString
+  status: MyString
+  candidate: two
+  vacancy: two

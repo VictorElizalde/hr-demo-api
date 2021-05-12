@@ -1,6 +1,6 @@
 class Api::V1::VacanciesController < ApplicationController
   def list_vacancies
-    @vacancies = Vacancy.all
+    @vacancies = Vacancy.all.includes(:company)
   end
 
   def see_vacancy
