@@ -16,6 +16,8 @@ Rails.application.routes.draw do
         resources :applications, only: [:update, :index]
       end
 
+      resources :applications, only: [:create]
+
       get 'list_vacancies', to: 'vacancies#list_vacancies', as: 'list_vacancies'
       get 'see_vacancy/:id', to: 'vacancies#see_vacancy', as: 'see_vacancy'
     end
