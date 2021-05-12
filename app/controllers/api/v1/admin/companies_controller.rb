@@ -1,5 +1,6 @@
 class Api::V1::Admin::CompaniesController < ApplicationController
-  before_action :set_company, only: [:update, :destroy]
+  acts_as_token_authentication_handler_for User
+  before_action :set_company, only: [:show, :update, :destroy]
 
   def index
     @companies = Company.all
@@ -7,7 +8,6 @@ class Api::V1::Admin::CompaniesController < ApplicationController
   end
 
   def show
-    @company = Company.find(params[:id])
     render json: @company
   end
 
